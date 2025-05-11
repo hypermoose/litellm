@@ -9,11 +9,13 @@
         "program": "${workspaceFolder}/litellm/proxy/proxy_cli.py",
         "request": "launch",
         "console": "integratedTerminal",
-        "args": ["--port", "4000"],  // replace with args you want to test
+        "args": ["--port", "4000", "--detailed_debug"],  // replace with args you want to test
         "env": {
             "LITELLM_MASTER_KEY": "sk-1234",
             "DATABASE_URL": "postgresql://litellm:litellm@127.0.0.1:5432/litellm",
-            "LITELLM_ENV": "development"
+            "LITELLM_ENV": "development",
+            "SLACK_WEBHOOK_URL": "https://hooks.slack.com/triggers/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",
+            "STORE_MODEL_IN_DB": "True"
         }
     }]
 }

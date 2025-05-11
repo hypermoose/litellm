@@ -1,0 +1,19 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [{
+        "name": "LiteLLM Debug Server",
+        "type": "python",
+        "program": "${workspaceFolder}/litellm/proxy/proxy_cli.py",
+        "request": "launch",
+        "console": "integratedTerminal",
+        "args": ["--port", "4000"],  // replace with args you want to test
+        "env": {
+            "LITELLM_MASTER_KEY": "sk-1234",
+            "DATABASE_URL": "postgresql://litellm:litellm@127.0.0.1:5432/litellm",
+            "LITELLM_ENV": "development"
+        }
+    }]
+}
